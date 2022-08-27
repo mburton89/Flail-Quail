@@ -7,11 +7,11 @@ public class Quail : MonoBehaviour
     public float jumpVelocity;
     public AudioSource jumpSound;
     public AudioSource hurtSound;
-    Rigidbody2D rigidbody2D;
+    Rigidbody2D rigidBody2D;
 
     void Start()
     {
-        rigidbody2D = GetComponent<Rigidbody2D>();
+        rigidBody2D = GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -22,13 +22,20 @@ public class Quail : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Lose();
+    }
+
     void Jump()
     {
-        rigidbody2D.velocity = Vector2.up * jumpVelocity;
+        rigidBody2D.velocity = Vector2.up * jumpVelocity;
+        jumpSound.Play();
     }
 
     void Lose()
     {
-
+        hurtSound.Play();
+        //Start Game Over
     }
 }
