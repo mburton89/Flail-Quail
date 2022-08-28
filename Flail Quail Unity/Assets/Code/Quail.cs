@@ -36,6 +36,6 @@ public class Quail : MonoBehaviour
     void Lose()
     {
         hurtSound.Play();
-        //Start Game Over
+        GameManager.Instance.GameOver();
     }
 }

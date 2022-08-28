@@ -57,6 +57,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7259260138832280416}
   - component: {fileID: 7259260138832280417}
+  - component: {fileID: 5540062392806185771}
   m_Layer: 0
   m_Name: Score Triger
   m_TagString: Untagged
@@ -104,6 +105,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &5540062392806185771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7259260138832280419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16c37b88f06e8844681b5b7f71f397b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7259260139787941261
 GameObject:
   m_ObjectHideFlags: 0
