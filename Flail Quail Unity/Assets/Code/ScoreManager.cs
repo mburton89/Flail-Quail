@@ -17,6 +17,6 @@ public class ScoreManager : MonoBehaviour
     public void AddPoint()
     {
         score++;
-        scoreText.SetText(score.ToString());
+        print(score);
     }
 }
