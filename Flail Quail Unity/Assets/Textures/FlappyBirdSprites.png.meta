@@ -246,7 +246,7 @@ TextureImporter:
       213: -4431834022844957694
     second: FlappyBirdSprites_80
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -263,10 +263,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -305,6 +307,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -316,6 +320,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -328,6 +333,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -340,6 +346,20 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -2056,9 +2076,90 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      FlappyBirdSprites_0: -7136548919436404840
+      FlappyBirdSprites_1: -8745445423961721946
+      FlappyBirdSprites_10: 201386178606668004
+      FlappyBirdSprites_11: 3655300593363568906
+      FlappyBirdSprites_12: 2649145044660557969
+      FlappyBirdSprites_13: -290674442342471345
+      FlappyBirdSprites_14: 2543478214522803222
+      FlappyBirdSprites_15: 2866733302819211716
+      FlappyBirdSprites_16: 1303333905645750014
+      FlappyBirdSprites_17: -8848513079806623015
+      FlappyBirdSprites_18: -975274431380248983
+      FlappyBirdSprites_19: -5615778244661105197
+      FlappyBirdSprites_2: -2605343093229151255
+      FlappyBirdSprites_20: -2604945159600431111
+      FlappyBirdSprites_21: 7155597880992842675
+      FlappyBirdSprites_22: 1716912983820397621
+      FlappyBirdSprites_23: -2055652986197983691
+      FlappyBirdSprites_24: -2460788613641639720
+      FlappyBirdSprites_25: -1638865341802959845
+      FlappyBirdSprites_26: -105473332693996990
+      FlappyBirdSprites_27: -2990441386765333730
+      FlappyBirdSprites_28: 5477696602758736467
+      FlappyBirdSprites_29: -7561564312015283552
+      FlappyBirdSprites_3: -5522370647392622582
+      FlappyBirdSprites_30: -3448722959077481612
+      FlappyBirdSprites_31: 4540006864663975071
+      FlappyBirdSprites_32: 3791476830832139581
+      FlappyBirdSprites_33: 8516137547336138293
+      FlappyBirdSprites_34: -3732782276854627910
+      FlappyBirdSprites_35: 3763084521020151380
+      FlappyBirdSprites_36: -9131570486621275978
+      FlappyBirdSprites_37: 9109759103495751385
+      FlappyBirdSprites_38: -3282225998259398680
+      FlappyBirdSprites_39: -3857129320854591434
+      FlappyBirdSprites_4: -8198477507142331509
+      FlappyBirdSprites_40: 9083626323527708563
+      FlappyBirdSprites_41: -1950288210987769188
+      FlappyBirdSprites_42: 7214318062750528328
+      FlappyBirdSprites_43: -1102310721654358493
+      FlappyBirdSprites_44: -3188353195172458311
+      FlappyBirdSprites_45: 8401476048767679966
+      FlappyBirdSprites_46: 3732692992633256872
+      FlappyBirdSprites_47: -8810147610376641972
+      FlappyBirdSprites_48: -1022499780474181938
+      FlappyBirdSprites_49: -2723660442288927140
+      FlappyBirdSprites_5: -7007995634079287483
+      FlappyBirdSprites_50: 2892394296237089894
+      FlappyBirdSprites_51: -8959247093771131089
+      FlappyBirdSprites_52: 135150279841979794
+      FlappyBirdSprites_53: -8565799664846108184
+      FlappyBirdSprites_54: 8886055665076452089
+      FlappyBirdSprites_55: -8946753361587066992
+      FlappyBirdSprites_56: 3307362661791429343
+      FlappyBirdSprites_57: -3299547022330897183
+      FlappyBirdSprites_58: 9078017070717240678
+      FlappyBirdSprites_59: -5644498121155426341
+      FlappyBirdSprites_6: 5733590650926196395
+      FlappyBirdSprites_60: 4042388447221364394
+      FlappyBirdSprites_61: 3982795028431590238
+      FlappyBirdSprites_62: -3710818002315876841
+      FlappyBirdSprites_63: -85698842444044548
+      FlappyBirdSprites_64: -979834707578185746
+      FlappyBirdSprites_65: -5753245657719743561
+      FlappyBirdSprites_66: 8564763170397357070
+      FlappyBirdSprites_67: -1935236081777374872
+      FlappyBirdSprites_68: 5302832860264612615
+      FlappyBirdSprites_69: 3861447898224610881
+      FlappyBirdSprites_7: 7641219024879087342
+      FlappyBirdSprites_70: -2189916624030511298
+      FlappyBirdSprites_71: 1817286457921605655
+      FlappyBirdSprites_72: -9019945077307074155
+      FlappyBirdSprites_73: 6676652699189692809
+      FlappyBirdSprites_74: -6398561203537279855
+      FlappyBirdSprites_75: 2714997394163681936
+      FlappyBirdSprites_76: -6220036499761213568
+      FlappyBirdSprites_77: 7050152840579722413
+      FlappyBirdSprites_78: -6582950289340618294
+      FlappyBirdSprites_79: -460623675598441160
+      FlappyBirdSprites_8: 4666182302374658506
+      FlappyBirdSprites_80: -4431834022844957694
+      FlappyBirdSprites_9: -8538128660133099487
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
