@@ -5,37 +5,30 @@ using UnityEngine;
 public class Quail : MonoBehaviour
 {
     public float jumpVelocity;
-    public AudioSource jumpSound;
-    public AudioSource hurtSound;
-    Rigidbody2D rigidBody2D;
 
-    void Start()
-    {
-        rigidBody2D = GetComponent<Rigidbody2D>();
-    }
+    public Rigidbody2D rigidBody2D;
 
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Jump();
+            Flap();
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Lose();
+        Crash();
     }
 
-    void Jump()
+    void Flap()
     {
         rigidBody2D.linearVelocity = Vector2.up * jumpVelocity;
-        jumpSound.Play();
     }
 
-    void Lose()
+    void Crash()
     {
-        hurtSound.Play();
-        //Start Game Over
+        //TODO: Play "Hurt" Sound
+        //TODO: Show Game Over Menu
     }
 }
