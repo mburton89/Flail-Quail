@@ -29,7 +29,7 @@ public class Quail : MonoBehaviour
 
     void Jump()
     {
-        rigidBody2D.velocity = Vector2.up * jumpVelocity;
+        rigidBody2D.linearVelocity = Vector2.up * jumpVelocity;
         jumpSound.Play();
     }
 
