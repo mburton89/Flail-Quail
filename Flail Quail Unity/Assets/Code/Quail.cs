@@ -30,6 +30,7 @@ public class Quail : MonoBehaviour
     void Jump()
     {
         rigidBody2D.linearVelocity = Vector2.up * jumpVelocity;
+        jumpSound.pitch = Random.Range(0.9f, 1.1f);
         jumpSound.Play();
     }
 
