@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Ground : MonoBehaviour
 {
-    public float movementSpeed;
     Vector3 initialPosition;
     public float minXPosition;
 
@@ -15,7 +14,8 @@ public class Ground : MonoBehaviour
 
     void Update()
     {
-        transform.position += Vector3.left * movementSpeed * Time.deltaTime;
+        //TODO: Give the ability to adjust speed
+        transform.position += Vector3.left * Time.deltaTime;
 
         if (transform.position.x < minXPosition)
         {
