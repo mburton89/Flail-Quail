@@ -6,6 +6,6 @@ public class ScoreTrigger : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //TODO: Add point to game
+        GameManager.Instance.AddPoint();
     }
 }
