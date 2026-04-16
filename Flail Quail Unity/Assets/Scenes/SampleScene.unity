@@ -1477,10 +1477,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2069349226}
   - component: {fileID: 2069349225}
-  - component: {fileID: 2069349224}
   - component: {fileID: 2069349223}
   - component: {fileID: 2069349227}
   - component: {fileID: 2069349228}
+  - component: {fileID: 2069349229}
   m_Layer: 0
   m_Name: Quail
   m_TagString: Untagged
@@ -1515,28 +1515,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!95 &2069349224
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2069349222}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e69265757ae7cc84499682233e69ea34, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!212 &2069349225
 SpriteRenderer:
   serializedVersion: 2
@@ -1586,7 +1564,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -6398561203537279855, guid: 709fd08f3d41f624db55fe7989cc1bf6, type: 3}
+  m_Sprite: {fileID: 4042388447221364394, guid: 709fd08f3d41f624db55fe7989cc1bf6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1664,6 +1642,28 @@ MonoBehaviour:
   jumpVelocity: 8
   jumpSound: {fileID: 1755989445}
   hurtSound: {fileID: 1314907584}
+--- !u!95 &2069349229
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069349222}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b9d6c69fbc550b34ea301093395028e1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2128520340
 GameObject:
   m_ObjectHideFlags: 0
