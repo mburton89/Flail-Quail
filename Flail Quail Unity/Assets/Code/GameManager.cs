@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         gameOverMenu.SetActive(true);
+        CheckForNewBestScore();
         Time.timeScale = 0;
     }
 

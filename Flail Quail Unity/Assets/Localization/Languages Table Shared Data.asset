@@ -14,7 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.SharedTableData
   m_TableCollectionName: Languages Table
   m_TableCollectionNameGuidString: fd838fde2a446c84d87be821f85131e5
-  m_Entries: []
+  m_Entries:
+  - m_Id: 3280734603812864
+    m_Key: game-over
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
