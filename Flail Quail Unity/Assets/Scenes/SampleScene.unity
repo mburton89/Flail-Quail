@@ -542,6 +542,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &622503383
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 622503385}
+  - component: {fileID: 622503384}
+  m_Layer: 0
+  m_Name: Apple Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &622503384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622503383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a9ce1586dd10b8438feef7aa797cfe1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSecondsPassed: 1.5
+  pipePrefab: {fileID: 5748606916374028235, guid: b1abd4b65731b974bb1a16776ba86197, type: 3}
+  randomHeight: 3
+--- !u!4 &622503385
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622503383}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &663890328
 GameObject:
   m_ObjectHideFlags: 0
@@ -1496,7 +1543,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 3c357657b18daaa4b95b46664eb9504a, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1819,6 +1866,8 @@ MonoBehaviour:
   jumpVelocity: 8
   jumpSound: {fileID: 1755989445}
   hurtSound: {fileID: 1314907584}
+  growthRate: {x: 0.1, y: 0.1, z: 0.1}
+  weightGain: 0.2
 --- !u!95 &2069349229
 Animator:
   serializedVersion: 7
@@ -1982,6 +2031,7 @@ SceneRoots:
   - {fileID: 1701687329}
   - {fileID: 2069349226}
   - {fileID: 663890329}
+  - {fileID: 622503385}
   - {fileID: 1543990785}
   - {fileID: 26475841}
   - {fileID: 1845260908}

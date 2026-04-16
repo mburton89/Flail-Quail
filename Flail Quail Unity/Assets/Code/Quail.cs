@@ -4,10 +4,19 @@ using UnityEngine;
 
 public class Quail : MonoBehaviour
 {
+    public static Quail Instance;
+
     public float jumpVelocity;
     public AudioSource jumpSound;
     public AudioSource hurtSound;
     Rigidbody2D rigidBody2D;
+    public Vector3 growthRate;
+    public float weightGain;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     void Start()
     {
@@ -38,5 +47,11 @@ public class Quail : MonoBehaviour
     {
         hurtSound.Play();
         GameManager.Instance.GameOver();
+    }
+
+    public void GetFat()
+    {
+        transform.localScale += growthRate;
+        rigidBody2D.gravityScale += weightGain;
     }
 }
