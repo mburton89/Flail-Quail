@@ -4,10 +4,20 @@ using UnityEngine;
 
 public class Quail : MonoBehaviour
 {
+    public static Quail Instance;
+
     public float jumpVelocity;
     public AudioSource jumpSound;
     public AudioSource hurtSound;
     Rigidbody2D rigidBody2D;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+    }
 
     void Start()
     {
