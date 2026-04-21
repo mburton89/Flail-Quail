@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-String-Tables-Swiss German (gsw)
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: Localization-String-Tables-Swiss German (gsw)
+  m_GUID: 960d2f22ac5e08d419ba4e23d2899036
+  m_SerializeEntries:
+  - m_GUID: 7efc9b21dbe9b794c8cf43d9032bb3a0
+    m_Address: Languages Table_gsw
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-gsw
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 68871238a0e3d8d43aa72af95e0a8d9c, type: 2}
+  m_SchemaSet:
+    m_Schemas: []
