@@ -7,6 +7,8 @@ public class Ground : MonoBehaviour
     Vector3 initialPosition;
     public float minXPosition;
 
+    public float scrollSpeed;
+
     private void Start()
     {
         initialPosition = transform.position;
@@ -15,7 +17,7 @@ public class Ground : MonoBehaviour
     void Update()
     {
         //TODO: Give the ability to adjust speed
-        transform.position += Vector3.left * Time.deltaTime;
+        transform.position += Vector3.left * scrollSpeed * Time.deltaTime;
 
         if (transform.position.x < minXPosition)
         {

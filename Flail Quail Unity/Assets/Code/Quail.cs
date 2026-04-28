@@ -13,6 +13,8 @@ public class Quail : MonoBehaviour
     public Vector3 growthRate;
     public float weightGain;
 
+    public float maxSize;
+
     private void Awake()
     {
         Instance = this;
@@ -51,7 +53,12 @@ public class Quail : MonoBehaviour
 
     public void GetFat()
     {
-        transform.localScale += growthRate;
-        rigidBody2D.gravityScale += weightGain;
+        if (transform.localScale.x < maxSize)
+        { 
+            transform.localScale += growthRate;
+        }
+
+
+        //rigidBody2D.gravityScale += weightGain;
     }
 }
