@@ -41,7 +41,7 @@ public class Quail : MonoBehaviour
     void Jump()
     {
         rigidBody2D.linearVelocity = Vector2.up * jumpVelocity;
-        jumpSound.pitch = Random.Range(0.9f, 1.1f);
+        jumpSound.pitch = Random.Range(0.92f, 1.08f);
         jumpSound.Play();
     }
 
@@ -60,5 +60,15 @@ public class Quail : MonoBehaviour
 
 
         //rigidBody2D.gravityScale += weightGain;
+    }
+
+    public void LoseWeight()
+    {
+        //if (transform.localScale.x > 1)
+        //{
+        //    transform.localScale -= growthRate * 2;
+        //}
+
+        transform.localScale = Vector3.one;
     }
 }

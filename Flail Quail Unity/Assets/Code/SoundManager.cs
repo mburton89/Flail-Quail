@@ -9,6 +9,7 @@ public class SoundManager : MonoBehaviour
 
     public AudioSource eatSound;
     public AudioSource drinkSound;
+    public AudioSource ozempigSound;
 
     private void Awake()
     {
@@ -33,5 +34,11 @@ public class SoundManager : MonoBehaviour
     {
         drinkSound.pitch = Random.Range(minPitch, maxPitch);
         drinkSound.Play();
+    }
+
+    internal void PlayOzempigSound()
+    {
+        ozempigSound.pitch = Random.Range(minPitch, maxPitch);
+        ozempigSound.Play();
     }
 }
