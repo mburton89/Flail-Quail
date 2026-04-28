@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
 
     public void Restart()
     {
+        SoundManager.Instance.PlayDrinkSound();
         SceneManager.LoadScene(0);
     }
 

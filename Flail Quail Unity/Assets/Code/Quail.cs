@@ -13,6 +13,8 @@ public class Quail : MonoBehaviour
     public Vector3 growthRate;
     public float weightGain;
 
+    public float maxSize;
+
     private void Awake()
     {
         Instance = this;
@@ -39,7 +41,7 @@ public class Quail : MonoBehaviour
     void Jump()
     {
         rigidBody2D.linearVelocity = Vector2.up * jumpVelocity;
-        jumpSound.pitch = Random.Range(0.9f, 1.1f);
+        jumpSound.pitch = Random.Range(0.92f, 1.08f);
         jumpSound.Play();
     }
 
@@ -51,7 +53,22 @@ public class Quail : MonoBehaviour
 
     public void GetFat()
     {
-        transform.localScale += growthRate;
-        rigidBody2D.gravityScale += weightGain;
+        if (transform.localScale.x < maxSize)
+        { 
+            transform.localScale += growthRate;
+        }
+
+
+        //rigidBody2D.gravityScale += weightGain;
+    }
+
+    public void LoseWeight()
+    {
+        //if (transform.localScale.x > 1)
+        //{
+        //    transform.localScale -= growthRate * 2;
+        //}
+
+        transform.localScale = Vector3.one;
     }
 }
