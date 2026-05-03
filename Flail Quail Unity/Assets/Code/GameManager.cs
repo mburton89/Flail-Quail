@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     int score = 0;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI bestScoreText;
+    public TextMeshProUGUI countdownText;
 
     private void Awake()
     {
@@ -23,7 +24,12 @@ public class GameManager : MonoBehaviour
             Instance = this;
         }
 
-        Time.timeScale = 1;
+    }
+
+    private void Start()
+    {
+        Time.timeScale = 0;
+        StartCoroutine(CountdownToStart());
     }
 
     public void GameOver()
@@ -33,9 +39,35 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0;
     }
 
+    //"321" countdown
+    IEnumerator CountdownToStart()
+    {
+        //hiding the score text right away
+        scoreText.gameObject.SetActive(false); 
+    
+        countdownText.gameObject.SetActive(true);
+
+        int count = 3;
+        while (count > 0)
+        {
+            countdownText.text = count.ToString();
+            yield return new WaitForSecondsRealtime(0.5f);
+            count--;
+        }
+
+        countdownText.text = "GO!";
+        yield return new WaitForSecondsRealtime(0.3f);
+
+        countdownText.gameObject.SetActive(false);
+
+        //this shows the score text now that the game is starting
+        scoreText.gameObject.SetActive(true); 
+
+        Time.timeScale = 1;
+    }
+
     public void Restart()
     {
-        SoundManager.Instance.PlayDrinkSound();
         SceneManager.LoadScene(0);
     }
 

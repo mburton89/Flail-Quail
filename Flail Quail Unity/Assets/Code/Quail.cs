@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class Quail : MonoBehaviour
 {
@@ -58,8 +59,8 @@ public class Quail : MonoBehaviour
             transform.localScale += growthRate;
         }
 
-
         //rigidBody2D.gravityScale += weightGain;
+        
     }
 
     public void LoseWeight()
