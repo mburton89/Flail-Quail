@@ -60,7 +60,7 @@ public class Quail : MonoBehaviour
         }
 
         //rigidBody2D.gravityScale += weightGain;
-        
+        transform.DOPunchScale(new Vector3 (1.2f,1.2f,1.2f), .25f, 10, 1);
     }
 
     public void LoseWeight()
@@ -71,5 +71,8 @@ public class Quail : MonoBehaviour
         //}
 
         transform.localScale = Vector3.one;
+
+        transform.DOPunchScale(new Vector3(0.1f, 0.1f, 0.1f), .25f, 10, 1);
+
     }
 }

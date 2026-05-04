@@ -77,6 +77,18 @@ public class GameManager : MonoBehaviour
         scoreText.SetText(score.ToString());
     }
 
+    public void ShowCustomText(string textToShow)
+    {
+        StartCoroutine(ShowCustomTextCo(textToShow));
+    }
+
+    private IEnumerator ShowCustomTextCo(string textToShow)
+    {
+        scoreText.SetText(textToShow);
+        yield return new WaitForSeconds(1.5f);
+        scoreText.SetText(score.ToString());
+    }
+
     void CheckForNewBestScore()
     {
         string localizedBestScoreLabel;
