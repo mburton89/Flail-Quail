@@ -1,15 +1,14 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
-using UnityEngine;
-using UnityEngine.Localization;           // for LocalizedString
+using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+
     public GameObject gameOverMenu;
 
     int score = 0;
@@ -17,13 +16,15 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI bestScoreText;
     public TextMeshProUGUI countdownText;
 
+    private bool canRestart = false;
+    private float restartDelay = 0.5f;
+
     private void Awake()
     {
         if (Instance == null)
-        { 
+        {
             Instance = this;
         }
-
     }
 
     private void Start()
@@ -37,14 +38,29 @@ public class GameManager : MonoBehaviour
         gameOverMenu.SetActive(true);
         CheckForNewBestScore();
         Time.timeScale = 0;
+
+        // Start the delay before allowing restart
+        StartCoroutine(EnableRestartAfterDelay());
     }
 
-    //"321" countdown
+    private IEnumerator EnableRestartAfterDelay()
+    {
+        yield return new WaitForSecondsRealtime(restartDelay);
+        canRestart = true;
+    }
+
+    public void Restart()
+    {
+        if (!canRestart) return;           // Block restart during the delay
+
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(0);
+    }
+
+    // "321" countdown
     IEnumerator CountdownToStart()
     {
-        //hiding the score text right away
-        scoreText.gameObject.SetActive(false); 
-    
+        scoreText.gameObject.SetActive(false);
         countdownText.gameObject.SetActive(true);
 
         int count = 3;
@@ -59,16 +75,9 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSecondsRealtime(0.3f);
 
         countdownText.gameObject.SetActive(false);
-
-        //this shows the score text now that the game is starting
-        scoreText.gameObject.SetActive(true); 
+        scoreText.gameObject.SetActive(true);
 
         Time.timeScale = 1;
-    }
-
-    public void Restart()
-    {
-        SceneManager.LoadScene(0);
     }
 
     public void AddPoint()
@@ -93,24 +102,20 @@ public class GameManager : MonoBehaviour
     {
         string localizedBestScoreLabel;
 
-        // Get the currently active locale from the Localization package
         Locale currentLocale = LocalizationSettings.SelectedLocale;
-
         if (currentLocale != null)
         {
-            string localeCode = currentLocale.Identifier.Code;   // e.g. "fr", "en", "de-CH", "de"
+            string localeCode = currentLocale.Identifier.Code;
 
             switch (localeCode)
             {
                 case "fr":
                     localizedBestScoreLabel = "Meilleur score : ";
                     break;
-
-                case "de":     // German / Swiss German
-                case "de-CH":  // Explicit Swiss German if you have a custom locale
+                case "de":
+                case "de-CH":
                     localizedBestScoreLabel = "Beste Punktzahl: ";
                     break;
-
                 case "en":
                 default:
                     localizedBestScoreLabel = "Best score: ";
@@ -119,12 +124,11 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            // Fallback in case localization hasn't initialized yet
             localizedBestScoreLabel = "Best score: ";
         }
 
         int currentBestScore = PlayerPrefs.GetInt("BestScore");
-        
+
         if (score > currentBestScore)
         {
             PlayerPrefs.SetInt("BestScore", score);

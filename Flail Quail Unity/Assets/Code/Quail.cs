@@ -16,6 +16,10 @@ public class Quail : MonoBehaviour
 
     public float maxSize;
 
+    public Animator animator;
+    public SpriteRenderer spriteRenderer;
+    public Sprite hamSprite;
+
     private void Awake()
     {
         Instance = this;
@@ -49,6 +53,11 @@ public class Quail : MonoBehaviour
     void Lose()
     {
         hurtSound.Play();
+
+        animator.StopPlayback();
+        animator.enabled = false;
+        spriteRenderer.sprite = hamSprite;
+
         GameManager.Instance.GameOver();
     }
 
